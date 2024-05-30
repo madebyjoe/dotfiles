@@ -5,15 +5,13 @@ add_to_path() {
   fi
 }
 
-# Load dotfiles binaries
-add_to_path "$DOTFILES/bin"
+#Android Paths
+export ANDROID_SDK=$HOME/Library/Android/sdk
 
-# Load global Composer tools
-add_to_path "$HOME/.composer/vendor/bin"
-
-# Load global Node installed binaries
-add_to_path "$HOME/.node/bin"
-
-# Use project specific binaries before global ones
-add_to_path "vendor/bin"
-add_to_path "node_modules/.bin"
+add_to_path "$ANDROID_SDK/emulator"
+add_to_path "$ANDROID_SDK/tools"
+add_to_path "$HOME/Library/Android/sdk/platform-tools"
+add_to_path "$HOME/Library/Android/sdk/tools"
+add_to_path "$HOME/Library/Android/sdk/platform-tools/adb-sync"
+add_to_path "$HOME/.rbenv/shims"
+add_to_path "$HOME/.Duplicacy"
