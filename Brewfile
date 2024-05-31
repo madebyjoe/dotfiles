@@ -1,10 +1,6 @@
-# Taps
-tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
-tap 'homebrew/bundle'
-
 # Binaries
 brew 'bash' # Latest Bash version
+brew 'chezmoi'
 brew 'coreutils' # Those that come with macOS are outdated
 brew 'dfu-util'
 brew 'docker'
@@ -35,8 +31,9 @@ cask 'dolphin'
 cask 'moonlight'
 brew 'ppsspp'
 
+# If there is already an application installed, the cask variant will download but it will not overwrite existing installations.
+
 # Apps
-# cask '1password'
 cask 'airtable'
 cask 'alfred'
 cask 'android-studio'
@@ -86,8 +83,6 @@ cask 'font-open-sans'
 cask 'font-roboto'
 cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
-cask 'font-source-sans-pro'
-cask 'font-source-serif-pro'
 
 # Mac App Store
 mas 'Paprika', id: 1303222628

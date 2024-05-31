@@ -36,4 +36,4 @@ mkdir $HOME/Code
 ln -sw $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Set macOS preferences - we will run this last because this will reload the shell
-# source ./.macos
+source ./.macos

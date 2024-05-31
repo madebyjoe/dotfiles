@@ -21,6 +21,8 @@ If you're migrating from an existing Mac, you should first make sure to backup a
 - Did you remember to export important data from your local database?
 - Did you update [mackup](https://github.com/lra/mackup) to the latest version and ran `mackup backup`?
 - Note that there exists a [bug with mackup](https://github.com/lra/mackup/issues/1855) if you are using `iTerm2` to run `mackup backup`. The current solution is to run the command from `Terminal` instead.
+- Thus, iTerm2 preferences are stored in `System/iTerm2/settings` and excluded from `mackup`
+- SSH config also needs to be configured seperately.
 
 ### Setting up your Mac
 
