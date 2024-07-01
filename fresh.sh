@@ -24,16 +24,40 @@ brew update
 
 # Install all our dependencies with bundle (See Brewfile)
 brew tap homebrew/bundle
-brew bundle --file ./Brewfile
 
 # Create a projects directories
 mkdir $HOME/Code
 
-# Clone Github repositories
-./clone.sh
+# Prompt the user for input with a default value of 'core'
+read -p "Enter the installation type (core/full) [core]: " install_type
 
-# Symlink the Mackup config file to the home directory
-ln -sw $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+# Set the default value to 'core' if no input is provided
+install_type=${install_type:-core}
+
+# Use the input in the rest of the script
+if [ "$install_type" = "core" ]; then
+    echo "Core installation selected."
+    
+    # Install core dependencies
+    brew bundle --file ./core/Brewfile
+    # Symlink the Mackup config file to the home directory
+    ln -sw $HOME/.dotfiles/core/.mackup.cfg $HOME/.mackup.cfg
+    # Clone Github repositories
+    ./core/clone.sh
+elif [ "$install_type" = "full" ]; then
+    echo "Full installation selected."
+    
+    # Install all dependencies
+    brew bundle --file ./core/Brewfile
+    brew bundle --file ./personal/Brewfile
+    # Symlink the Mackup config file to the home directory
+    ln -sw $HOME/.dotfiles/personal/.mackup.cfg $HOME/.mackup.cfg
+    # Clone Github repositories
+    ./personal/clone.sh
+else
+    echo "Invalid option. Please enter 'core' or 'full'."
+    exit 1
+fi
 
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
