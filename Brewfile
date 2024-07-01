@@ -17,6 +17,7 @@ brew 'ncdu'
 brew 'node'
 brew 'ollama'
 brew 'pandoc'
+brew 'pdf-diff'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'pipx'
 brew 'pyenv'
@@ -43,6 +44,7 @@ cask 'atext'
 cask 'balenaetcher'
 cask 'bartender'
 cask 'betterdisplay'
+cask 'cardhop'
 cask 'cheatsheet'
 cask 'coolterm'
 cask 'discord'
@@ -85,7 +87,11 @@ cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 
 # Mac App Store
-mas 'Paprika', id: 1303222628
+mas 'Aiko', id: 1672085276
 mas 'Blackmagic Disc Speed Test', id: 425264550
+mas 'Drafts', id: 1435957248
+mas 'Dark Noise: Ambient Sounds', id: 1465439395
+mas 'Hand Mirror', id: 1502839586
+mas 'Paprika', id: 1303222628
 mas 'Speedtest', id: 1153157709
 mas 'Xcode', id: 497799835
