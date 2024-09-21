@@ -7,6 +7,7 @@ brew 'ppsspp'
 # If there is already an application installed, the cask variant will download but it will not overwrite existing installations.
 
 # Personal Apps
+cask '1password'
 cask 'airtable'
 cask 'arduino-ide'
 cask 'cardhop'
