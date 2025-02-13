@@ -113,3 +113,6 @@ if [ -f "$HOME/.google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/.google-cl
 
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/joeburke/.lmstudio/bin"

@@ -59,5 +59,10 @@ else
     exit 1
 fi
 
+# Setup the docker preferences
+mkdir -p ~/.docker/cli-plugins
+ln -sfn $(brew --prefix)/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+ln -sfn $(brew --prefix)/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
