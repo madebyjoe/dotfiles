@@ -16,9 +16,12 @@ brew 'jenv'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'maven'
+brew 'mosh'
 brew 'ncdu'
 brew 'node'
 brew 'ollama'
+brew 'opencode'
+brew 'orbstack'
 brew 'pandoc'
 brew 'pdf-diff'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20

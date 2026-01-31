@@ -116,3 +116,4 @@ eval "$(jenv init -)"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/joeburke/.lmstudio/bin"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
